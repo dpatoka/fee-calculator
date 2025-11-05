@@ -1,0 +1,20 @@
+#!/usr/bin/env php
+<?php
+
+use FeeCalculator\Modules\LoanPricing\Interface\Cli\Command\FeeCalculationCommandFactory;
+
+require_once dirname(__DIR__).'/vendor/autoload.php';
+
+$amountString = $argv[1] ?? '';
+$termString = $argv[2] ?? '';
+
+try {
+    $command = FeeCalculationCommandFactory::create();
+    $result = $command->execute($amountString, $termString);
+
+    echo sprintf("%s\n", $result);
+    exit(0);
+} catch (Throwable $e) {
+    fwrite(STDERR, sprintf("Error: %s\n", $e->getMessage()));
+    exit(1);
+}
