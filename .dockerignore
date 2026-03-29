@@ -1,0 +1,48 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# IDE
+.vscode/
+.idea/
+
+# Composer
+vendor/
+
+# PHP cache / artifacts
+var/
+*.cache
+
+# PHPStan
+var/phpstan/
+
+# Logs
+*.log
+/log/
+/logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-compose*.yml
+Dockerfile
+.dockerignore
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+
+# Docs
+README*
+CHANGELOG*
+LICENSE
+
+# Tests
+tests/
+behat.yml
+phpunit.xml
+
+Makefile

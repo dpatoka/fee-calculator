@@ -4,5 +4,6 @@ var
 *.override.*
 .env
 .idea
+.vscode
 .php-cs-fixer.cache
 .phpunit.result.cache

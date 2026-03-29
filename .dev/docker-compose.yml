@@ -1,10 +1,12 @@
+# dev environment
 services:
   app:
     build:
       context: ..
       dockerfile: .dev/Dockerfile
+      target: dev
     working_dir: /app
     volumes:
       - ../:/app
-    tty: true
-    stdin_open: true
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
